@@ -8,7 +8,7 @@ module Guard
 
     def initialize(watchers=[], options={})
       super
-      @config_path = File.join(Dir.pwd, options[:config_path] || 'config/jslint.yml')
+      @config_path = File.join(Dir.pwd, options[:config_path] || 'config/jshint.yml')
     end
 
     def start
