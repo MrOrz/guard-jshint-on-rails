@@ -1,12 +1,11 @@
 require 'guard'
-require 'guard/guard'
 require 'guard/notifier'
 require 'jshint'
 
 module Guard
-  class JshintOnRails < Guard
+  class JshintOnRails < Guard::Plugin
 
-    def initialize(watchers=[], options={})
+    def initialize(options={})
       super
       @config_path = File.join(Dir.pwd, options[:config_path] || 'config/jslint.yml')
     end
